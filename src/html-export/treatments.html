@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panchakarma Treatments - AyurSutra</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Sora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <span>A</span>
+                    </div>
+                    <span class="logo-text">AyurSutra</span>
+                </a>
+
+                <!-- Navigation -->
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="hospitals.html" class="nav-link">Hospitals</a>
+                    <a href="treatments.html" class="nav-link active">Treatments</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- Auth Section -->
+                <div class="auth-section">
+                    <button class="btn btn-outline btn-sm" onclick="showLogin()">Login</button>
+                    <button class="btn btn-primary btn-sm" onclick="showAppointment()">Book Appointment</button>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="hospitals.html" class="mobile-nav-link">Hospitals</a>
+            <a href="treatments.html" class="mobile-nav-link">Treatments</a>
+            <a href="index.html#contact" class="mobile-nav-link">Contact</a>
+            <button class="btn btn-primary btn-sm" onclick="showAppointment()">Book Appointment</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="container">
+            <div class="hero-content" style="text-align: center;">
+                <div class="hero-text">
+                    <h1 class="hero-title" style="font-size: 3.5rem;">
+                        Authentic <span class="text-primary">Panchakarma</span> Treatments
+                    </h1>
+                    <p class="hero-description" style="max-width: 48rem; margin: 0 auto;">
+                        Discover the five sacred therapies of Ayurveda designed to detoxify, rejuvenate, and restore your body's natural balance. 
+                        Each treatment is carefully administered by certified practitioners using traditional methods and authentic herbs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments Overview -->
+    <section class="about-panchakarma">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Five Pillars of Panchakarma</h2>
+                <p class="section-description">
+                    Panchakarma, meaning "five actions," represents the most comprehensive detoxification and rejuvenation program in Ayurveda. 
+                    These time-tested therapies work synergistically to eliminate toxins, balance doshas, and restore optimal health.
+                </p>
+            </div>
+
+            <div class="treatments-grid">
+                <!-- Vaman Treatment -->
+                <div class="treatment-card" onclick="showTreatmentDetail('vaman')">
+                    <div class="treatment-image">
+                        <img src="https://static.wixstatic.com/media/3b6749_9349f05cf3624788a6c0f72a0bfeec6c~mv2.png?originWidth=384&originHeight=192" 
+                             alt="Vaman Therapy">
+                        <div style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.9); padding: 0.5rem; border-radius: 0.5rem;">
+                            <span style="font-size: 0.75rem; font-weight: 600; color: var(--primary);">7-14 Days</span>
+                        </div>
+                    </div>
+                    <div class="treatment-content">
+                        <div class="treatment-header">
+                            <i class="fas fa-leaf treatment-icon"></i>
+                            <h3 class="treatment-name">Vaman</h3>
+                        </div>
+                        <p class="treatment-title">Therapeutic Vomiting</p>
+                        <p class="treatment-description">
+                            A controlled therapeutic vomiting procedure that eliminates excess Kapha dosha and toxins from the upper respiratory tract and stomach. Highly effective for respiratory and digestive disorders.
+                        </p>
+                        <div class="treatment-benefits">
+                            <p class="benefits-title">Key Benefits:</p>
+                            <ul class="benefits-list">
+                                <li>Removes excess Kapha dosha</li>
+                                <li>Clears respiratory congestion</li>
+                                <li>Improves digestion and metabolism</li>
+                                <li>Treats chronic cough and asthma</li>
+                            </ul>
+                        </div>
+                        <div class="treatment-link">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Virechan Treatment -->
+                <div class="treatment-card" onclick="showTreatmentDetail('virechan')">
+                    <div class="treatment-image">
+                        <img src="https://static.wixstatic.com/media/3b6749_b95ef52d58a24fda84f0c70d07a66ef8~mv2.png?originWidth=384&originHeight=192" 
+                             alt="Virechan Therapy">
+                        <div style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.9); padding: 0.5rem; border-radius: 0.5rem;">
+                            <span style="font-size: 0.75rem; font-weight: 600; color: var(--primary);">10-15 Days</span>
+                        </div>
+                    </div>
+                    <div class="treatment-content">
+                        <div class="treatment-header">
+                            <i class="fas fa-leaf treatment-icon"></i>
+                            <h3 class="treatment-name">Virechan</h3>
+                        </div>
+                        <p class="treatment-title">Purgation Therapy</p>
+                        <p class="treatment-description">
+                            A controlled purgation therapy that cleanses the small intestine, liver, and eliminates excess Pitta dosha. Excellent for liver disorders and inflammatory conditions.
+                        </p>
+                        <div class="treatment-benefits">
+                            <p class="benefits-title">Key Benefits:</p>
+                            <ul class="benefits-list">
+                                <li>Eliminates excess Pitta dosha</li>
+                                <li>Detoxifies liver and gallbladder</li>
+                                <li>Improves skin health and complexion</li>
+                                <li>Treats inflammatory conditions</li>
+                            </ul>
+                        </div>
+                        <div class="treatment-link">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Basti Treatment -->
+                <div class="treatment-card" onclick="showTreatmentDetail('basti')">
+                    <div class="treatment-image">
+                        <img src="https://static.wixstatic.com/media/3b6749_0fae52fd10f6427087ae82f233edceba~mv2.png?originWidth=384&originHeight=192" 
+                             alt="Basti Therapy">
+                        <div style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.9); padding: 0.5rem; border-radius: 0.5rem;">
+                            <span style="font-size: 0.75rem; font-weight: 600; color: var(--primary);">15-30 Days</span>
+                        </div>
+                    </div>
+                    <div class="treatment-content">
+                        <div class="treatment-header">
+                            <i class="fas fa-leaf treatment-icon"></i>
+                            <h3 class="treatment-name">Basti</h3>
+                        </div>
+                        <p class="treatment-title">Medicated Enema</p>
+                        <p class="treatment-description">
+                            The most important Panchakarma therapy involving medicated enemas to cleanse and nourish the colon. Highly effective for Vata disorders and neurological conditions.
+                        </p>
+                        <div class="treatment-benefits">
+                            <p class="benefits-title">Key Benefits:</p>
+                            <ul class="benefits-list">
+                                <li>Balances Vata dosha effectively</li>
+                                <li>Strengthens nervous system</li>
+                                <li>Improves joint health and mobility</li>
+                                <li>Enhances reproductive health</li>
+                            </ul>
+                        </div>
+                        <div class="treatment-link">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nasya Treatment -->
+                <div class="treatment-card" onclick="showTreatmentDetail('nasya')">
+                    <div class="treatment-image">
+                        <img src="https://static.wixstatic.com/media/3b6749_0c8b80da70ff45628c8d6249b50fcdf0~mv2.png?originWidth=384&originHeight=192" 
+                             alt="Nasya Therapy">
+                        <div style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.9); padding: 0.5rem; border-radius: 0.5rem;">
+                            <span style="font-size: 0.75rem; font-weight: 600; color: var(--primary);">7-21 Days</span>
+                        </div>
+                    </div>
+                    <div class="treatment-content">
+                        <div class="treatment-header">
+                            <i class="fas fa-leaf treatment-icon"></i>
+                            <h3 class="treatment-name">Nasya</h3>
+                        </div>
+                        <p class="treatment-title">Nasal Therapy</p>
+                        <p class="treatment-description">
+                            Administration of medicated oils through nasal passages to treat head and neck disorders. Excellent for sinus problems, headaches, and mental clarity.
+                        </p>
+                        <div class="treatment-benefits">
+                            <p class="benefits-title">Key Benefits:</p>
+                            <ul class="benefits-list">
+                                <li>Clears sinuses and nasal passages</li>
+                                <li>Improves mental clarity</li>
+                                <li>Treats chronic headaches</li>
+                                <li>Enhances sensory functions</li>
+                            </ul>
+                        </div>
+                        <div class="treatment-link">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Raktamokshana Treatment -->
+                <div class="treatment-card" onclick="showTreatmentDetail('raktamokshana')">
+                    <div class="treatment-image">
+                        <img src="https://static.wixstatic.com/media/3b6749_01c864f6a119489a8b3b6590339cfc4c~mv2.png?originWidth=384&originHeight=192" 
+                             alt="Raktamokshana Therapy">
+                        <div style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.9); padding: 0.5rem; border-radius: 0.5rem;">
+                            <span style="font-size: 0.75rem; font-weight: 600; color: var(--primary);">1-7 Days</span>
+                        </div>
+                    </div>
+                    <div class="treatment-content">
+                        <div class="treatment-header">
+                            <i class="fas fa-leaf treatment-icon"></i>
+                            <h3 class="treatment-name">Raktamokshana</h3>
+                        </div>
+                        <p class="treatment-title">Bloodletting Therapy</p>
+                        <p class="treatment-description">
+                            A specialized therapy involving controlled removal of impure blood to treat blood-related disorders. Highly effective for skin conditions and inflammatory diseases.
+                        </p>
+                        <div class="treatment-benefits">
+                            <p class="benefits-title">Key Benefits:</p>
+                            <ul class="benefits-list">
+                                <li>Purifies blood and circulation</li>
+                                <li>Treats various skin disorders</li>
+                                <li>Reduces inflammation</li>
+                                <li>Manages hypertension naturally</li>
+                            </ul>
+                        </div>
+                        <div class="treatment-link">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Process Section -->
+    <section class="stats" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Treatment Process</h2>
+                <p class="section-description">
+                    Every Panchakarma treatment follows a systematic approach ensuring safety, effectiveness, and optimal results. 
+                    Our experienced practitioners guide you through each phase of your healing journey.
+                </p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value">Consultation</h3>
+                        <p class="stat-label">Detailed health assessment and treatment planning</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value">Preparation</h3>
+                        <p class="stat-label">Pre-treatment therapies to prepare your body</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value">Treatment</h3>
+                        <p class="stat-label">Main Panchakarma therapy administration</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value">Recovery</h3>
+                        <p class="stat-label">Post-treatment care and lifestyle guidance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="about-panchakarma" style="background: var(--background);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Panchakarma?</h2>
+                <p class="section-description">
+                    Panchakarma offers comprehensive healing that goes beyond symptom management to address the root causes of illness. 
+                    Experience the transformative power of authentic Ayurvedic medicine.
+                </p>
+            </div>
+
+            <div class="treatments-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="treatment-card" style="cursor: default;">
+                    <div class="treatment-content" style="text-align: center;">
+                        <div style="width: 4rem; height: 4rem; background: rgba(85, 139, 47, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-recycle" style="font-size: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h3 class="treatment-name">Complete Detoxification</h3>
+                        <p class="treatment-description">
+                            Eliminates accumulated toxins (Ama) from deep tissues, restoring cellular function and vitality.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="treatment-card" style="cursor: default;">
+                    <div class="treatment-content" style="text-align: center;">
+                        <div style="width: 4rem; height: 4rem; background: rgba(165, 214, 167, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-balance-scale" style="font-size: 2rem; color: var(--earthy-brown);"></i>
+                        </div>
+                        <h3 class="treatment-name">Dosha Balance</h3>
+                        <p class="treatment-description">
+                            Restores the natural balance of Vata, Pitta, and Kapha doshas for optimal health and well-being.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="treatment-card" style="cursor: default;">
+                    <div class="treatment-content" style="text-align: center;">
+                        <div style="width: 4rem; height: 4rem; background: rgba(189, 189, 189, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--earthy-brown);"></i>
+                        </div>
+                        <h3 class="treatment-name">Enhanced Immunity</h3>
+                        <p class="treatment-description">
+                            Strengthens the body's natural defense mechanisms and improves resistance to diseases.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="treatment-card" style="cursor: default;">
+                    <div class="treatment-content" style="text-align: center;">
+                        <div style="width: 4rem; height: 4rem; background: rgba(85, 139, 47, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-brain" style="font-size: 2rem; color: var(--primary);"></i>
+                        </div>
+                        <h3 class="treatment-name">Mental Clarity</h3>
+                        <p class="treatment-description">
+                            Improves cognitive function, reduces stress, and promotes emotional balance and mental peace.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="treatment-card" style="cursor: default;">
+                    <div class="treatment-content" style="text-align: center;">
+                        <div style="width: 4rem; height: 4rem; background: rgba(165, 214, 167, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-seedling" style="font-size: 2rem; color: var(--earthy-brown);"></i>
+                        </div>
+                        <h3 class="treatment-name">Rejuvenation</h3>
+                        <p class="treatment-description">
+                            Promotes cellular regeneration, slows aging process, and enhances overall vitality and energy.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="treatment-card" style="cursor: default;">
+                    <div class="treatment-content" style="text-align: center;">
+                        <div style="width: 4rem; height: 4rem; background: rgba(189, 189, 189, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-heartbeat" style="font-size: 2rem; color: var(--earthy-brown);"></i>
+                        </div>
+                        <h3 class="treatment-name">Chronic Disease Management</h3>
+                        <p class="treatment-description">
+                            Effectively addresses chronic conditions like arthritis, diabetes, and digestive disorders.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Begin Your Healing Journey Today</h2>
+                <p class="cta-description">
+                    Experience the transformative power of authentic Panchakarma treatments. Our certified practitioners 
+                    will guide you through a personalized healing program designed for your unique constitution and health needs.
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn btn-secondary btn-lg" onclick="showAppointment()">
+                        <i class="fas fa-calendar"></i>
+                        Book Consultation
+                    </button>
+                    <a href="hospitals.html" class="btn btn-outline-white btn-lg">
+                        Find Treatment Centers
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <span>A</span>
+                        </div>
+                        <span class="logo-text">AyurSutra</span>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted partner in holistic wellness through authentic Panchakarma treatments and modern healthcare management.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="treatments.html" class="footer-link">Treatments</a></li>
+                        <li><a href="hospitals.html" class="footer-link">Hospitals</a></li>
+                        <li><a href="#" class="footer-link" onclick="showAppointment()">Book Appointment</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Panchakarma Treatments</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link" onclick="showTreatmentDetail('vaman')">Vaman (Therapeutic Vomiting)</a></li>
+                        <li><a href="#" class="footer-link" onclick="showTreatmentDetail('virechan')">Virechan (Purgation)</a></li>
+                        <li><a href="#" class="footer-link" onclick="showTreatmentDetail('basti')">Basti (Medicated Enema)</a></li>
+                        <li><a href="#" class="footer-link" onclick="showTreatmentDetail('nasya')">Nasya (Nasal Therapy)</a></li>
+                        <li><a href="#" class="footer-link" onclick="showTreatmentDetail('raktamokshana')">Raktamokshana (Bloodletting)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>123 Wellness Street<br>Ayurveda District<br>Health City, HC 12345</p>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@ayursutra.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">© 2024 AyurSutra. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="#" class="footer-legal-link">Privacy Policy</a>
+                        <a href="#" class="footer-legal-link">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login to AyurSutra</h2>
+                <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form class="login-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Login</button>
+                </form>
+                <p class="modal-footer-text">
+                    Don't have an account? <a href="#" onclick="showRegister()">Sign up here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointment Modal -->
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Book Your Appointment</h2>
+                <span class="close" onclick="closeModal('appointmentModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form class="appointment-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="appointmentEmail">Email</label>
+                            <input type="email" id="appointmentEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="treatment">Treatment</label>
+                        <select id="treatment" name="treatment" required>
+                            <option value="">Select a treatment</option>
+                            <option value="vaman">Vaman (Therapeutic Vomiting)</option>
+                            <option value="virechan">Virechan (Purgation Therapy)</option>
+                            <option value="basti">Basti (Medicated Enema)</option>
+                            <option value="nasya">Nasya (Nasal Therapy)</option>
+                            <option value="raktamokshana">Raktamokshana (Bloodletting)</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <select id="time" name="time" required>
+                                <option value="">Select time</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message (Optional)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Any specific concerns or requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Book Appointment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
